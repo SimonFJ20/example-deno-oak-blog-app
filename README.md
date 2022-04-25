@@ -1,5 +1,7 @@
 # example-deno-oak-blog-app
 
+This is an example project to show how to make a clean architechture building a blog-platform-web-app-thing using Deno+Oak+Web.
+
 ## Setup
 
 ### VS Code
@@ -17,3 +19,11 @@
 6. Run application by typing `deno run --allow-read --allow-net main.ts`
 
 7. Run application in watch-mode by typing `deno run --watch --allow-read --allow-net main.ts`
+
+## Things to be aware of
+
+### Static files
+
+Static file serving is implemented using Oak built-in send `Context.send`.
+This is fragile and should be replaced by either a seperate static file server,
+or a better Oak middleware.
